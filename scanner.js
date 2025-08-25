@@ -68,19 +68,19 @@ function scanFrame() {
   animationFrameId = requestAnimationFrame(scanFrame);
 }
 
-function getUserIdFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("uid");
-}
+// function getUserIdFromUrl() {
+//   const params = new URLSearchParams(window.location.search);
+//   return params.get("uid");
+// }
 
-const uid = getUserIdFromUrl();
-if (uid) {
-  alert("UID from QR link: " + uid);
-  // fetch(`/api/user/${uid}`) ...
-}
+// const uid = getUserIdFromUrl();
+// if (uid) {
+//   alert("UID from URL: " + uid);
+// }
 
 // Attach button listeners
 startButton.addEventListener('click', startScanning);
 stopButton.addEventListener('click', stopScanning);
+
 
 
